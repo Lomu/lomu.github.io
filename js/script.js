@@ -42,7 +42,7 @@ $(function(){
             $("#email").poshytip('show');
             setTimeout(function(){$("#email").poshytip('hide');},3000);
         }else{
-            $.post("send_mail.php",{mail:value},function(result){
+            $.post("send_mail.php",{mail:value},success:function(result){
                 if(result==1){
                     showtip('Subscribe success!','green');
                     $("#email").poshytip('show');
@@ -51,7 +51,8 @@ $(function(){
                     showtip('You have already subscribed!','yellow');
                     $("#email").poshytip('show');
                     setTimeout(function(){$("#email").poshytip('hide');},3000);
-                }else{
+                },
+                 error:function(XMLHttpRequest, textStatus, errorThrown){
                     showtip('Subscribe failed!','yellow');
                     $("#email").poshytip('show');
                     setTimeout(function(){$("#email").poshytip('hide');},3000);
