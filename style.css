@@ -35,7 +35,7 @@ body{
 	font-size:26px;
 	width:100%;
     line-height: 40px;
-    z-index: 9999;
+    z-index: 9998;
 }
 #text2{
 	height:32px;
@@ -174,7 +174,7 @@ body{
 	background:url(images/tip-green_arrows.gif) no-repeat -30px 0;
 }
 .tip-yellow {
-	z-index:1000;
+	z-index:9999;
 	text-align:left;
 	border:1px solid #939393;
 	padding:7px;
