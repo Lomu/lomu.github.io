@@ -10,7 +10,7 @@ $(function(){
         }
     );
     //Edit this date
-    $("#countdown").countdown({until: new Date(2013, 12-1, 25)}); 
+    $("#countdown").countdown({until: new Date(2013, 5-1, 3)}); 
     
     function showtip(content,color){
         $('#email').poshytip({
