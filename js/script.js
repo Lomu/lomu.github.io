@@ -1,5 +1,5 @@
 $(function(){
-	$('body').lomuAnimate(
+    $('body').lomuAnimate(
         {
             dom:'#logo,#text1,#text2,#text3,#text4,#text5',
             affect: 'easeOutBounce,easeOutQuint,easeOutQuint,easeOutBack,easeOutQuint,easeOutQuint',
@@ -10,8 +10,8 @@ $(function(){
         }
     );
     //Edit this date
-    $("#countdown").countdown({until: new Date(2013, 5-1, 3)}); 
-    
+    $("#countdown").countdown({until: new Date(2013, 5-1, 3)});
+
     function showtip(content,color){
         $('#email').poshytip({
             content: content,
@@ -22,7 +22,7 @@ $(function(){
             alignY: 'bottom',
             offsetX: 0,
             offsetY: 10
-        });  
+        });
     }
 
     $("#subscribe").submit(function(e){
@@ -52,61 +52,61 @@ $(function(){
                     $("#email").poshytip('show');
                     setTimeout(function(){$("#email").poshytip('hide');},3000);
                 }
-            }).error({
+            }).error(function(){
                     showtip('Subscribe failed!','yellow');
-                    $("#email").poshytip('show');
-                    setTimeout(function(){$("#email").poshytip('hide');},3000);
-                });
-        }
-    });
-    $("#email").click(function(){
-        $(this).removeClass('error');
-        $(this).removeClass('ok');
-        $(this).poshytip('hide');
-    })
-    spaceParallax();
-    // Function to create subtle parallax space effect
-    function spaceParallax() {
-        $('body').parallax({
-            'elements': [
-                {
-                    'selector': '.bg-1',
-                    'properties': {
-                        'x': {
-                            'background-position-x': {
-                                'initial': 0,
-                                'multiplier': 0.02,
-                                'invert': true
-                            }
-                        }
-                    }
-                },
-                {
-                    'selector': '.bg-2',
-                    'properties': {
-                        'x': {
-                            'background-position-x': {
-                                'initial': 0,
-                                'multiplier': 0.1,
-                                'invert': true
-                            }
-                        }
-                    }
-                },
-                {
-                    'selector': '.bg-3',
-                    'properties': {
-                        'x': {
-                            'background-position-x': {
-                                'initial': 0,
-                                'multiplier': 0.05,
-                                'invert': true
-                            }
+            $("#email").poshytip('show');
+            setTimeout(function(){$("#email").poshytip('hide');},3000);
+        });
+    }
+});
+$("#email").click(function(){
+    $(this).removeClass('error');
+    $(this).removeClass('ok');
+    $(this).poshytip('hide');
+})
+spaceParallax();
+// Function to create subtle parallax space effect
+function spaceParallax() {
+    $('body').parallax({
+        'elements': [
+            {
+                'selector': '.bg-1',
+                'properties': {
+                    'x': {
+                        'background-position-x': {
+                            'initial': 0,
+                            'multiplier': 0.02,
+                            'invert': true
                         }
                     }
                 }
-            ]
-        });
-    }
-	
+            },
+            {
+                'selector': '.bg-2',
+                'properties': {
+                    'x': {
+                        'background-position-x': {
+                            'initial': 0,
+                            'multiplier': 0.1,
+                            'invert': true
+                        }
+                    }
+                }
+            },
+            {
+                'selector': '.bg-3',
+                'properties': {
+                    'x': {
+                        'background-position-x': {
+                            'initial': 0,
+                            'multiplier': 0.05,
+                            'invert': true
+                        }
+                    }
+                }
+            }
+        ]
+    });
+}
+
 });
