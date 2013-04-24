@@ -51,6 +51,10 @@ $(function(){
                     showtip('You have already subscribed!','yellow');
                     $("#email").poshytip('show');
                     setTimeout(function(){$("#email").poshytip('hide');},3000);
+                }else{
+                    showtip('Subscribe failed!','yellow');
+                    $("#email").poshytip('show');
+                    setTimeout(function(){$("#email").poshytip('hide');},3000);
                 }
             });
         }
