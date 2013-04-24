@@ -53,7 +53,7 @@ $(function(){
                     setTimeout(function(){$("#email").poshytip('hide');},3000);
                 }
             }).error(function(){
-                    showtip('Subscribe failed!\nThe current server looks does not support php! ','yellow');
+                    showtip('Subscribe failed!<br />The current server looks does not support php! ','yellow');
             $("#email").poshytip('show');
             setTimeout(function(){$("#email").poshytip('hide');},3000);
         });
