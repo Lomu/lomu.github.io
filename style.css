@@ -116,7 +116,8 @@ body{
 
 /* Tip */
 .tip-green {
-	z-index:1000;
+	position:relative;
+	z-index:9999;
 	text-align:left;
 	border:1px solid #bdde98;
 	padding:7px 10px;
